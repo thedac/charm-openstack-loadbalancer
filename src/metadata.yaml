@@ -1,0 +1,29 @@
+name: openstack-loadbalancer
+summary: OpenStack Load Balancer
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+description: |
+    The OpenStack Load Balancer enables Openstack API services to be highly
+    available and load balanced in complex network topologies.
+tags:
+  - openstack
+series:
+  - xenial
+  - artful
+  - trusty
+  - yakkety
+  - zesty
+subordinate: false
+provides:
+  public-backend:
+    interface: openstack-api-endpoints
+  admin-backend:
+    interface: openstack-api-endpoints
+  internal-backend:
+    interface: openstack-api-endpoints
+requires:
+  ha:
+    interface: hacluster
+    scope: container
+peers:
+  cluster:
+    interface: lb

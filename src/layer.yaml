@@ -1,0 +1,3 @@
+includes: ['layer:basic', 'layer:openstack', 'interface:hacluster', 'interface:openstack-ha',
+           'interface:openstack-api-endpoints']
+repo: https://github.com/openstack-charmers/charm-openstack-loadbalancer
